@@ -1,7 +1,7 @@
 %define module  IMAP-Admin
 %define name    perl-%{module}
 %define version 1.6.4
-%define release 1mdk
+%define release %mkrel 1
 
 Name:		%name
 Summary:	IMAP-Admin Perl module
