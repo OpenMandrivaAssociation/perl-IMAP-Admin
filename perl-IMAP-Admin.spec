@@ -10,6 +10,7 @@ Release:	%release
 License:	GPL or Artistic
 Group:		Development/Perl
 Source:		%{module}-%{version}.tar.bz2
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot/
 URL:		http://search.cpan.org/dist/%{module}/
 Buildarch:	noarch
 
