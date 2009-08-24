@@ -1,24 +1,24 @@
-%define module  IMAP-Admin
-%define name    perl-%{module}
-%define version 1.6.6
-%define release %mkrel 1
+%define upstream_name    IMAP-Admin
+%define upstream_version 1.6.7
 
-Name:		%name
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	IMAP-Admin Perl module
-Version:	%version
-Release:	%release
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		%{module}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot/
-URL:		http://search.cpan.org/dist/%{module}/
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://www.cpan.org/modules/by-module/IMAP/%{upstream_name}-%{upstream_version}.tar.gz
+
 Buildarch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 A perl module to manage IMAP servers
 
 %prep
-%setup -n %{module}-%{version}
+%setup -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -36,4 +36,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-, root, root)
 %{perl_vendorlib}/IMAP/*
 %{_mandir}/*/*
-
