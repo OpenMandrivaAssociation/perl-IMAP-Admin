@@ -7,7 +7,7 @@ Release:	1
 Summary:	IMAP-Admin Perl module
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
+Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/IMAP/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	perl-devel
